@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Termas Papallacta</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        background: #050816 !important;
+        color: #e2e8f0;
+    }
+
+    .formulario {
+        background: #0b1120;
+        border: 1px solid #164e63;
+        border-radius: 15px;
+        box-shadow: 0 0 20px #06b6d422;
+        color: #e2e8f0;
+    }
+
+    .titulo {
+        background: linear-gradient(90deg, #06b6d4, #a855f7, #ec4899);
+        color: transparent;
+        background-clip: text;
+    }
+
+    .text-muted {
+        color: #94a3b8 !important;
+    }
+
+    .form-control {
+        background: #080d19;
+        border: 1px solid #334155;
+        color: white;
+    }
+
+    .form-control:focus {
+        background: #080d19;
+        color: white;
+        border-color: #06b6d4;
+        box-shadow: 0 0 8px #06b6d455;
+    }
+
+    .form-check-input {
+        background-color: #080d19;
+        border-color: #64748b;
+    }
+
+    .form-check-input:checked {
+        background-color: #a855f7;
+        border-color: #a855f7;
+    }
+
+    .btn-neon {
+        background: linear-gradient(90deg, #06b6d4, #6366f1, #d946ef);
+        color: white;
+        border: none;
+        font-weight: bold;
+    }
+
+    .btn-neon:hover {
+        color: white;
+        box-shadow: 0 0 15px #8b5cf688;
+    }
+
+/* Fondo para las partículas */
+body {
+    background: #050816 !important;
+    overflow-x: hidden;
+}
+
+/* Capa de partículas */
+.particulas {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Cada punto luminoso */
+.particulas span {
+    position: absolute;
+    bottom: -20px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #06b6d4;
+    box-shadow: 0 0 10px currentColor;
+    animation: flotar 12s linear infinite;
+}
+
+/* Movimiento ascendente */
+@keyframes flotar {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.8;
+    }
+    85% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+/* Mantener el formulario delante */
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Diferentes posiciones, colores y velocidades */
+.particulas span:nth-child(1)  { left: 10%; color: #06b6d4; animation-duration: 10s; }
+.particulas span:nth-child(2)  { left: 25%; color: #8b5cf6; animation-duration: 14s; animation-delay: 2s; }
+.particulas span:nth-child(3)  { left: 40%; color: #ec4899; animation-duration: 11s; animation-delay: 4s; }
+.particulas span:nth-child(4)  { left: 55%; color: #3b82f6; animation-duration: 15s; animation-delay: 1s; }
+.particulas span:nth-child(5)  { left: 70%; color: #06b6d4; animation-duration: 12s; animation-delay: 5s; }
+.particulas span:nth-child(6)  { left: 85%; color: #d946ef; animation-duration: 13s; animation-delay: 3s; }
+.particulas span:nth-child(7)  { left: 95%; color: #6366f1; animation-duration: 16s; animation-delay: 6s; }
+.particulas span:nth-child(8)  { left: 18%; color: #ec4899; animation-duration: 17s; animation-delay: 7s; }
+.particulas span:nth-child(9)  { left: 62%; color: #8b5cf6; animation-duration: 12s; animation-delay: 8s; }
+.particulas span:nth-child(10) { left: 78%; color: #06b6d4; animation-duration: 14s; animation-delay: 9s; }
+
+</style>
+
+</head>
+<body>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10 formulario p-4 shadow">
+                
+                <h1 class="mb-3 text-center titulo">Formulario Satisfacción de Visita</h1>
+                <p class="text-muted text-center mb-4">Califique su experiencia de las Termas Papallacta</p>
+                
+            <div class="particulas">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>   
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+                <form>
+                    <!-- 1. Nombre -->
+                    <div class="mb-3">
+                        <label for="Nombre" class="form-label"><strong>1. Nombre:</strong></label>
+                        <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Ingrese su nombre">
+                    </div>
+
+                    <!-- 2. Primera vez -->
+                    <div class="mb-3">
+                        <label class="form-label"><strong>2. ¿Es la primera vez que visitas las termas?</strong></label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="primera_si" name="primera_vez" value="si">
+                            <label class="form-check-label" for="primera_si">Sí</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="primera_no" name="primera_vez" value="no">
+                            <label class="form-check-label" for="primera_no">No</label>
+                        </div>
+                    </div>
+
+                    <!-- 3. Temperatura -->
+                    <div class="mb-3">
+                        <label class="form-label"><strong>3. ¿La temperatura del agua en las piscinas fue de tu agrado?</strong></label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="temp_excelente" name="temperatura" value="excelente">
+                            <label class="form-check-label" for="temp_excelente">Excelente</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="temp_buena" name="temperatura" value="buena">
+                            <label class="form-check-label" for="temp_buena">Buena</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="temp_regular" name="temperatura" value="regular">
+                            <label class="form-check-label" for="temp_regular">Regular / Muy fría</label>
+                        </div>
+                    </div>
+
+                    <!-- 4. Servicios -->
+                    <div class="mb-3">
+                        <label class="form-label"><strong>4. ¿Qué otros servicios consumiste durante tu estadía?</strong></label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="restaurante" name="servicio" value="restaurante">
+                            <label class="form-check-label" for="restaurante">Restaurante / Cafetería</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="lockers" name="servicio" value="lockers">
+                            <label class="form-check-label" for="lockers">Alquiler de lockers / vestidores</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="masajes" name="servicio" value="masajes">
+                            <label class="form-check-label" for="masajes">Tratamientos de masajes</label>
+                        </div>
+                    </div>
+
+                    <!-- 5. Piscinas / Áreas -->
+                    <div class="mb-3">
+                        <label class="form-label"><strong>5. ¿Qué piscinas o áreas utilizaste hoy?</strong></label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="termales" name="area" value="termales">
+                            <label class="form-check-label" for="termales">Piscinas termales públicas</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="fria" name="area" value="fría">
+                            <label class="form-check-label" for="fria">Piscina de agua fría del río</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="spa_piscinas" name="area" value="spa">
+                            <label class="form-check-label" for="spa_piscinas">Piscinas del área de Spa</label>
+                        </div>
+                    </div>
+
+                    <!-- 6. Ciudad o país -->
+                    <div class="mb-3">
+                        <label for="ciudad" class="form-label"><strong>6. ¿De qué ciudad o país nos visitas?</strong></label>
+                        <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ej. Quito, Ecuador">
+                    </div>
+
+                    <!-- 7. Limpieza -->
+                    <div class="mb-3">
+                        <label class="form-label"><strong>7. ¿Cómo calificas la limpieza de las duchas y baños?</strong></label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="limpieza_limpio" name="limpieza" value="limpio">
+                            <label class="form-check-label" for="limpieza_limpio">Muy limpio</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="limpieza_aceptable" name="limpieza" value="aceptable">
+                            <label class="form-check-label" for="limpieza_aceptable">Aceptable</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="limpieza_sucio" name="limpieza" value="sucio">
+                            <label class="form-check-label" for="limpieza_sucio">Necesita mejorar</label>
+                        </div>
+                    </div>
+
+                    <!-- 8. Atención -->
+                    <div class="mb-3">
+                        <label class="form-label"><strong>8. ¿Qué aspectos de la atención te gustaron más?</strong></label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="atencion_rapida" name="gusto_atención" value="rapidez">
+                            <label class="form-check-label" for="atencion_rapida">Rapidez en la entrada</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="atencion_amable" name="gusto_atención" value="amabilidad">
+                            <label class="form-check-label" for="atencion_amable">Amabilidad del personal</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="atencion_seguridad" name="gusto_atención" value="seguridad">
+                            <label class="form-check-label" for="atencion_seguridad">Presencia de salvavidas / personal</label>
+                        </div>
+                    </div>
+
+                    <!-- 9. Recomendación -->
+                    <div class="mb-3">
+                        <label class="form-label"><strong>9. ¿Recomendarías las Termas de Papallacta a tus amigos o familiares?</strong></label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="rec_si" name="recomendar" value="si">
+                            <label class="form-check-label" for="rec_si">Sí, totalmente</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="rec_talvez" name="recomendar" value="tal_vez">
+                            <label class="form-check-label" for="rec_talvez">Tal vez</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="rec_no" name="recomendar" value="no">
+                            <label class="form-check-label" for="rec_no">No</label>
+                        </div>
+                    </div>
+
+                    <!-- 10. Sugerencias -->
+                    <div class="mb-4">
+                        <label for="comentarios" class="form-label"><strong>10. Déjanos una sugerencia para mejorar tu próxima visita:</strong></label>
+                        <textarea class="form-control" id="comentarios" name="comentarios" rows="3"></textarea>
+                    </div>
+
+                    <!-- Botón -->
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
